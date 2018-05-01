@@ -1,0 +1,29 @@
+<header>Welcome to Project Gamma</header>
+<div class="button">
+  <button class="btn btn-danger" (click)="emptyList()">Empty the list with employees</button>
+</div>
+<div class="button">
+  <button class="btn btn-success" (click)="getEmpList()">Recieve list with employees</button>
+</div>
+
+<div class="listEmpWrapper">
+  <ul *ngFor="let employee of EmployeeList">
+    <div class="listEmpLists" (click)="onEmpToShow(employee)" (click)="createImageData()">
+        <p> EmployeeID : {{employee.EmployeeID}} </p> 
+    </div>  
+  </ul>
+</div>
+
+<div ngDraggable [handle]="DragHandle">
+    <div *ngFor="let employee of EmployeeToShow;" class="infoEmpWindowWrapper">
+      <div class="infoText">
+        <p> EmployeeID: {{employee.EmployeeID}}  </p>
+        <p> First name: {{ employee.TitleOfCourtesy }} {{ employee.FirstName }} </p>
+        <p> Last name: {{ employee.LastName }}  </p>
+        <p> Title : {{ employee.Title }}   </p>
+      </div>
+      <div class="infoImage">
+        <img src={{imageData}}/> 
+      </div>
+    </div>
+</div>

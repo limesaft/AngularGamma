@@ -1,0 +1,65 @@
+.listEmpWrapper {
+    margin-top: 2em;  
+    float: left;  
+    position: relative;   
+}
+
+.listEmpLists {    
+    cursor: pointer;
+    border: 2px solid black;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    background: purple;
+}
+
+.listEmpLists:hover  {
+    background: white;
+    color: black;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+  
+header {
+    padding: 1em;
+    color: white;
+    background-color: purple;
+    clear: left;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.button {
+    margin-right: 2em;    
+    margin-top: 2em;    
+    position: relative;  
+    float: right;
+}
+
+.infoEmpWindowWrapper {
+    cursor: grab;
+    border: 2px solid black;
+    border-radius: 10px;    
+    height: 100%;
+    width: 420px;
+    margin-top: 4em;  
+    overflow: auto;   
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    background: purple;
+}
+
+.infoimage {
+    overflow: hidden;
+    float: right;
+}
+
+.infoText {
+    float: left;      
+}
