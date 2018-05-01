@@ -16,11 +16,19 @@ export class EmployeeWsComponent implements OnInit {
   EmployeeList = [];
   EmployeeToShow = [];
   imageData: string;
-  
+  birthYear: string;
+
   // Substring 104 for removing the "OLE" info, cant find a dynamic version 
   private createImageData(): void {
     if (this.EmployeeToShow.length > 0 ) { 
       this.imageData = "data:image/jpg;base64," + this.EmployeeToShow[0]["Photo"].substring(104);
+    };
+  }
+  
+  // Slices the string and keep the year
+  private createYear(): void {
+    if (this.EmployeeToShow.length > 0 ) { 
+      this.birthYear = this.EmployeeToShow[0]["BirthDate"].slice(0,4);
     };
   }
   

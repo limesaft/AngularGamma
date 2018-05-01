@@ -8,7 +8,7 @@
 
 <div class="listEmpWrapper">
   <ul *ngFor="let employee of EmployeeList">
-    <div class="listEmpLists" (click)="onEmpToShow(employee)" (click)="createImageData()">
+    <div class="listEmpLists" (click)="onEmpToShow(employee)" (click)="createImageData()" (click)="createYear()">
         <p> EmployeeID : {{employee.EmployeeID}} </p> 
     </div>  
   </ul>
@@ -18,9 +18,11 @@
     <div *ngFor="let employee of EmployeeToShow;" class="infoEmpWindowWrapper">
       <div class="infoText">
         <p> EmployeeID: {{employee.EmployeeID}}  </p>
-        <p> First name: {{ employee.TitleOfCourtesy }} {{ employee.FirstName }} </p>
-        <p> Last name: {{ employee.LastName }}  </p>
+        <p> Last name: {{ employee.LastName }}  </p>        
+        <p> First name: {{ employee.FirstName }} </p>
         <p> Title : {{ employee.Title }}   </p>
+        <p> Title of courtesy: {{ employee.TitleOfCourtesy }} </p>
+        <p> Birthyear: {{birthYear}}</p>
       </div>
       <div class="infoImage">
         <img src={{imageData}}/> 
